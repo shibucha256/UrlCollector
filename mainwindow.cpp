@@ -141,7 +141,7 @@ void MainWindow::writeLog(const QString& log)
     QString dt = now.toString("yyyyMMddhhmmss");
 
     QTextStream out(&file);
-    out << dt << " " << log << endl;
+    out << dt << " " << log << Qt::endl;
 
     file.close();
 }
