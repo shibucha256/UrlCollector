@@ -106,14 +106,9 @@ void MainWindow::textArrived(const QString& text)
                 QRegularExpressionMatch match = mi.next();
                 QString url = match.captured("url");
 
-                this->ui->listWidget->addItem(url);
+                this->ui->textEdit->append(url);
                 //
                 writeLog(url);
-
-                // scroll to last
-                int lastRow = this->ui->listWidget->count() - 1;
-                QListWidgetItem* lastItem = this->ui->listWidget->item(lastRow);
-                this->ui->listWidget->scrollToItem(lastItem);
             }
         }
     }
